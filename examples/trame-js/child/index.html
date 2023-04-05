@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <textarea id="messages"></textarea>
+        <button onclick="sayHello()">Hello</button>
+
+        <script>
+            function sayHello() {
+                window.postMessage({ emit: "child-to-parent", value: "Hello"}, "*");
+            }
+
+            function receivedMessage(msg) {
+                document.querySelector("#messages").value += JSON.stringify(msg.data) + "\n";
+            }
+
+            window.addEventListener("message", receivedMessage);
+        </script>
+    </body>
+</html>

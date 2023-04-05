@@ -1,0 +1,45 @@
+{
+  "name": "trame-iframe",
+  "version": "0.0.0",
+  "description": "Vue component to expose cross-origin communication between Window objects",
+  "repository": "Kitware/trame-iframe",
+  "main": "./dist/trame-iframe.umd.js",
+  "unpkg": "./dist/trame-iframe.umd.js",
+  "module": "./dist/trame-iframe.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/trame-iframe.mjs",
+      "require": "./dist/trame-iframe.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore --ignore-pattern public",
+    "semantic-release": "semantic-release"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^4.0.0"
+  },
+  "peerDependencies": {
+    "vue": "^2.7.0 || >=3.0.0"
+  },
+  "devDependencies": {
+    "semantic-release": "19.0.2",
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "eslint": "^8.33.0",
+    "eslint-plugin-vue": "^9.3.0",
+    "prettier": "^2.7.1",
+    "vite": "^4.1.0",
+    "vue": "^3.0.0"
+  },
+  "author": "Kitware Inc",
+  "license": "BSD-3-Clause",
+  "files": [
+    "dist/*",
+    "src/*",
+    "*.json",
+    "*.js"
+  ]
+}

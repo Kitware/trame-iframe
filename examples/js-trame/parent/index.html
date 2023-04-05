@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <button onclick="sayHello()">Hello</button>
+        <iframe src="/" width="100%" height="500">
+        </iframe>
+        <textarea id="messages"></textarea>
+
+
+        <script>
+            function sayHello() {
+                document.querySelector("iframe").contentWindow.postMessage({ emit: "parent-to-child", value: "Hello"}, "*")
+            }
+
+            function receivedMessage(msg) {
+                if (msg.data.emit) {
+                    document.querySelector("#messages").value += `${msg.data.emit}: ${msg.data.value}\n`;
+                }
+            }
+
+            document.querySelector("iframe").contentWindow.addEventListener("message", receivedMessage);
+        </script>
+    </body>
+</html>
