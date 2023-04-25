@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v1.0.1 (2023-04-25)
+### Fix
+* **api:** Expose only meaningful classes ([`63e05be`](https://github.com/Kitware/trame-iframe/commit/63e05be7103de5d85aa4be3a02f3d4f9b4f185e3))
+
 ## v1.0.0 (2023-04-05)
 ### Feature
 * Initial release for production ([`6eeb658`](https://github.com/Kitware/trame-iframe/commit/6eeb658f999ba73c26f551d6a4c11d2799fa1da7))
