@@ -1,5 +1,13 @@
+"""IFrame Widgets support both vue2 and vue3 backend.
+"""
+
 from trame_client.widgets.core import AbstractElement
 from .. import module
+
+__all__ = [
+    "IFrame",
+    "Communicator",
+]
 
 
 class HtmlElement(AbstractElement):
