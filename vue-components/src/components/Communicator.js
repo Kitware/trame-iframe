@@ -1,11 +1,18 @@
 import { inject, onMounted, onBeforeUnmount } from "vue";
 
 export default {
+  props: ["parentOrigin"],
   setup(props, { emit }) {
     const trame = inject("trame");
 
+    const parentOrigin = props.parentOrigin;
+
     function postMessage(msg) {
-      window.postMessage(msg, "*");
+      if (!parentOrigin) {
+        window.postMessage(msg, "*");
+      } else {
+        window.parent.postMessage(msg, parentOrigin);
+      }
     }
 
     function triggerEmit(event) {
