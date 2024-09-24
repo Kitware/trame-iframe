@@ -1,7 +1,6 @@
 """IFrame Widgets support both vue2 and vue3 backend.
 """
 
-from typing import Optional
 from trame_client.widgets.core import AbstractElement
 from .. import module
 
@@ -94,14 +93,15 @@ class IFrame(HtmlElement):
 class Communicator(HtmlElement):
     _next_id = 0
 
-    def __init__(self, event_names=[], parent_origin: Optional[str] = None, **kwargs):
+    def __init__(self, event_names=[], **kwargs):
         """
         Create an invisible element that will allow a nested trame application to communicate with the iframe owner.
 
         Properties:
 
         :param event_names: List of string matching the expected emit topics from the child window.
-        :param parent_origin: Target origin we want to communicate to. If none, we assume same-origin.
+        :param target_origin: Target origin we want to communicate to. If none, we assume same-origin.
+        :param enable_rpc: True if you want to allow communication with an iframe client
 
         Events:
 
@@ -119,17 +119,16 @@ class Communicator(HtmlElement):
         Communicator._next_id += 1
         ref_name = f"trame_comm_{Communicator._next_id}"
         self.__ref = kwargs.get("ref", ref_name)
-        self._parent_origin = parent_origin
 
         super().__init__(
             "communicator",
             **kwargs,
         )
         self._attr_names += [
-            ["parent_origin", "parentOrigin"],
+            ["target_origin", "targetOrigin"],
+            ["enable_rpc", "enableRpc"],
         ]
         self._attributes["ref"] = f'ref="{self.__ref}"'
-        self._attributes["parent_origin"] = f'parentOrigin="{self._parent_origin}"'
 
         self._event_names += event_names
 
