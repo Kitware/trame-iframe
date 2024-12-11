@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v1.1.0 (2024-12-11)
+
+### Feature
+
+* **JS lib:** Add a client JS lib for the Communicator ([`cecb226`](https://github.com/Kitware/trame-iframe/commit/cecb2260f260525c10957d9d2f4720686da0eab4))
+* **cross-origin:** Embedded trame app to cross origin context ([`885bbbe`](https://github.com/Kitware/trame-iframe/commit/885bbbe3e2e3a8b115d06b37883093d89c967764))
+
 ## v1.0.1 (2023-04-25)
 ### Fix
 * **api:** Expose only meaningful classes ([`63e05be`](https://github.com/Kitware/trame-iframe/commit/63e05be7103de5d85aa4be3a02f3d4f9b4f185e3))
