@@ -100,6 +100,8 @@ class Communicator(HtmlElement):
         Properties:
 
         :param event_names: List of string matching the expected emit topics from the child window.
+        :param target_origin: Target origin we want to communicate to. If none, we assume same-origin.
+        :param enable_rpc: True if you want to allow communication with an iframe client
 
         Events:
 
@@ -122,7 +124,12 @@ class Communicator(HtmlElement):
             "communicator",
             **kwargs,
         )
+        self._attr_names += [
+            ["target_origin", "targetOrigin"],
+            ["enable_rpc", "enableRpc"],
+        ]
         self._attributes["ref"] = f'ref="{self.__ref}"'
+
         self._event_names += event_names
 
     def post_message(self, msg):
