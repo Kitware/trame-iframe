@@ -12,6 +12,6 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
-    "@kitware/trame-iframe-client": "/home/jules/projects/kitware/trame/repos/trame-iframe/js-lib/dist/trame-iframe.mjs"
+    "@kitware/trame-iframe-client": "^0.0.1"
   }
 }
