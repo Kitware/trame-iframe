@@ -1,4 +1,4 @@
-# Trame iframe client library for plain JS
+# Trame iframe library for plain JS
 This library aims to simplify interaction between a trame application living inside an iframe and its iframe parent.  
 This work is inspired by the [official trame-client js lib](https://github.com/Kitware/trame-client/tree/master/js-lib)
 
@@ -8,7 +8,7 @@ This work is inspired by the [official trame-client js lib](https://github.com/K
 ## Usage
 First you need to grab the iframe that contains your trame application.
 ```js
-import ClientCommunicator from "@kitware/trame-iframe-client";
+import ClientCommunicator from "@kitware/trame-iframe";
 
 const iframe = document.getElementById("trame_app");
 const iframe_url = "http://localhost:3000";

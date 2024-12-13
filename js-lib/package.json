@@ -1,6 +1,6 @@
 {
-    "name": "@kitware/trame-iframe-client",
-    "version": "0.0.1",
+    "name": "@kitware/trame-iframe",
+    "version": "0.0.2",
     "license": "Apache-2.0",
     "main": "./dist/trame-iframe.umd.js",
     "unpkg": "./dist/trame-iframe.umd.js",

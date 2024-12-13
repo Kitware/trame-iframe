@@ -1,4 +1,4 @@
-import ClientCommunicator from "@kitware/trame-iframe-client";
+import ClientCommunicator from "@kitware/trame-iframe";
 import "./style.css";
 import { setupCounter } from "./counter.js";
 

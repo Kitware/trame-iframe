@@ -12,6 +12,6 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
-    "@kitware/trame-iframe-client": "^0.0.1"
+    "@kitware/trame-iframe": "latest"
   }
 }
