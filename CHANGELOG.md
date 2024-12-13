@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v1.1.1 (2024-12-13)
+
+### Fix
+
+* **js:** Rename js lib to be @kitware/trame-iframe ([`4a181b3`](https://github.com/Kitware/trame-iframe/commit/4a181b3591b2db9d3c068a2bd6f95d49c540876f))
+
 ## v1.1.0 (2024-12-11)
 
 ### Feature
