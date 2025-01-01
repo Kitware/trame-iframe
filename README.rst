@@ -1,4 +1,6 @@
-trame-iframe
+.. |pypi_download| image:: https://img.shields.io/pypi/dm/trame-iframe
+
+trame-iframe |pypi_download|
 ===========================================================
 
 Trame widget library that can be use to handle cross-origin communication with iframe.
