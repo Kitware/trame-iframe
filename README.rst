@@ -1,4 +1,4 @@
-.. |pypi_download| image:: https://img.shields.io/pypi/dm/trame-iframe
+.. |pypi_download| image:: https://kitware.github.io/trame/downloads/trame-iframe.svg
 
 trame-iframe |pypi_download|
 ===========================================================
